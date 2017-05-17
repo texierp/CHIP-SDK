@@ -87,15 +87,6 @@ if [ -d CHIP-tools ]; then
 fi
 git clone https://github.com/NextThingCo/CHIP-tools.git
 
-echo -e "\n Installing CHIP-buildroot"
-if [ ! -d CHIP-buildroot ]; then
-  git clone http://github.com/NextThingCo/CHIP-buildroot
-else
-  pushd CHIP-buildroot
-  git pull
-  popd
-fi
-
 if [ $(echo $PWD | grep vagrant) ];then
   sudo chown -R vagrant:vagrant *
 fi
